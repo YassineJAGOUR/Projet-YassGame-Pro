@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YassGame Pro - Boutique de jeux vidéo Tunisie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="text-logo">
+                    <div class="logo-icon">🎮</div>
+                    <div class="logo-text">
+                        <span class="logo-part1">Yass</span>
+                        <span class="logo-part2">Game</span>
+                        <span class="logo-part3"> Pro</span>
+                    </div>
+                    <div class="logo-sub">Tunisie • TND</div>
+                </div>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a>
+                <a href="#games"><i class="fas fa-gamepad"></i> Jeux</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="admin.html"><i class="fas fa-cog"></i> Admin</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        
+        <div class="currency-display">
+            <span><i class="fas fa-coins"></i> Devise : Dinar Tunisien (TND)</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenue chez YassGame Pro</h2>
+            <p>La première boutique de jeux vidéo en Tunisie avec des prix en Dinar Tunisien</p>
+            <a href="#games" class="btn-primary">Voir les jeux</a>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher un jeu...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filters">
+                <select id="platformFilter">
+                    <option value="all">Toutes les plateformes</option>
+                    <option value="pc">PC</option>
+                    <option value="playstation">PlayStation</option>
+                    <option value="xbox">Xbox</option>
+                    <option value="nintendo">Nintendo</option>
+                </select>
+                
+                <select id="categoryFilter">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="action">Action</option>
+                    <option value="aventure">Aventure</option>
+                    <option value="rpg">RPG</option>
+                    <option value="sport">Sport</option>
+                    <option value="strategie">Stratégie</option>
+                </select>
+                
+                <select id="priceFilter">
+                    <option value="all">Tous les prix</option>
+                    <option value="0-50">Moins de 50 TND</option>
+                    <option value="50-100">50 à 100 TND</option>
+                    <option value="100+">Plus de 100 TND</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="games-section">
+        <div class="container">
+            <h2 class="section-title">Nos Jeux Vidéo</h2>
+            <p class="section-subtitle">Achetez vos jeux en ligne en Dinar Tunisien</p>
+            
+            <div class="games-grid" id="gamesGrid"></div>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="container">
+            <h2 class="section-title">Promotions du moment</h2>
+            <div class="promo-banner">
+                <div class="promo-content">
+                    <h3>Jusqu'à -30% sur les jeux PlayStation</h3>
+                    <p>Profitez de réductions exceptionnelles jusqu'au 27 janvier</p>
+                    <button class="btn-secondary">Voir les offres</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Catégories populaires</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Jeux de Sport</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-user-ninja"></i>
+                    <h3>Action-Aventure</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-dragon"></i>
+                    <h3>RPG</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chess"></i>
+                    <h3>Stratégie</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YassGame Pro</h3>
+                    <p>La boutique de jeux vidéo préférée des Tunisiens. Tous les prix en Dinar Tunisien.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#games">Jeux</a></li>
+                        <li><a href="cart.html">Panier</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sousse, Tunisie</p>
+                    <p><i class="fas fa-phone"></i> +216 28 654 XXX</p>
+                    <p><i class="fas fa-envelope"></i> contact@yassgamepro.tn</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 YassGame Pro - Projet scolaire. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cart" id="floatingCart">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

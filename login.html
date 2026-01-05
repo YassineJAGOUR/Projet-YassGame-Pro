@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - YassGame Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="text-logo">
+                    <div class="logo-icon">🎮</div>
+                    <div class="logo-text">
+                        <span class="logo-part1">Yass</span>
+                        <span class="logo-part2">Game</span>
+                        <span class="logo-part3"> Pro</span>
+                    </div>
+                    <div class="logo-sub">Tunisie • TND</div>
+                </div>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+                <a href="index.html#games"><i class="fas fa-gamepad"></i> Jeux</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="login.html" class="active"><i class="fas fa-user"></i> Connexion</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        
+        <div class="currency-display">
+            <span><i class="fas fa-coins"></i> Devise : Dinar Tunisien (TND)</span>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="container auth-container">
+            <div class="auth-form">
+                <h2>Connexion</h2>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%;">Se connecter</button>
+                    
+                    <div class="auth-links">
+                        <p>Pas encore de compte ? <a href="register.html">S'inscrire</a></p>
+                        <p><a href="index.html">Retour à l'accueil</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YassGame Pro</h3>
+                    <p>La boutique de jeux vidéo préférée des Tunisiens. Tous les prix en Dinar Tunisien.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#games">Jeux</a></li>
+                        <li><a href="cart.html">Panier</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sousse, Tunisie</p>
+                    <p><i class="fas fa-phone"></i> +216 28 654 XXX</p>
+                    <p><i class="fas fa-envelope"></i> contact@yassgamepro.tn</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 YassGame Pro - Projet scolaire. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Connexion simulée ! (Projet scolaire)');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - YassGame Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="text-logo">
+                    <div class="logo-icon">🎮</div>
+                    <div class="logo-text">
+                        <span class="logo-part1">Yass</span>
+                        <span class="logo-part2">Game</span>
+                        <span class="logo-part3"> Pro</span>
+                    </div>
+                    <div class="logo-sub">Tunisie • TND</div>
+                </div>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+                <a href="index.html#games"><i class="fas fa-gamepad"></i> Jeux</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="admin.html" class="active"><i class="fas fa-cog"></i> Admin</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        
+        <div class="currency-display">
+            <span><i class="fas fa-coins"></i> Devise : Dinar Tunisien (TND)</span>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="container">
+            <h2 class="section-title">Administration YassGame Pro</h2>
+            <p class="section-subtitle">Gérez les jeux de votre boutique</p>
+            
+            <div class="admin-container">
+                <h3 id="formTitle">Ajouter un jeu</h3>
+                
+                <form id="gameForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="gameTitle">Titre du jeu *</label>
+                        <input type="text" id="gameTitle" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gameDescription">Description *</label>
+                        <textarea id="gameDescription" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gamePrice">Prix (TND) *</label>
+                        <input type="number" id="gamePrice" step="0.01" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gamePlatform">Plateforme *</label>
+                        <select id="gamePlatform" required>
+                            <option value="">Sélectionnez une plateforme</option>
+                            <option value="pc">PC</option>
+                            <option value="playstation">PlayStation</option>
+                            <option value="xbox">Xbox</option>
+                            <option value="nintendo">Nintendo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gameCategory">Catégorie *</label>
+                        <select id="gameCategory" required>
+                            <option value="">Sélectionnez une catégorie</option>
+                            <option value="action">Action</option>
+                            <option value="aventure">Aventure</option>
+                            <option value="rpg">RPG</option>
+                            <option value="sport">Sport</option>
+                            <option value="strategie">Stratégie</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gameImage">URL de l'image *</label>
+                        <input type="text" id="gameImage" required 
+                               placeholder="https://images.unsplash.com/photo-...">
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px;">
+                        <button type="submit" class="btn-primary">Enregistrer</button>
+                        <button type="button" class="btn-secondary" id="cancelBtn">Annuler</button>
+                    </div>
+                </form>
+                
+                <div class="product-list">
+                    <h3>Jeux disponibles</h3>
+                    <div id="gamesList"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YassGame Pro</h3>
+                    <p>La boutique de jeux vidéo préférée des Tunisiens. Tous les prix en Dinar Tunisien.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#games">Jeux</a></li>
+                        <li><a href="cart.html">Panier</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sousse, Tunisie</p>
+                    <p><i class="fas fa-phone"></i> +216 28 654 XXX</p>
+                    <p><i class="fas fa-envelope"></i> contact@yassgamepro.tn</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 YassGame Pro - Projet scolaire. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cart" id="floatingCart">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </a>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
